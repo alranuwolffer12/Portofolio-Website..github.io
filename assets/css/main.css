@@ -1,0 +1,62 @@
+/* ====== leyout tampilan utama ====== */
+
+/* === leyout shell === */
+.app-shell {
+    display: flex;
+    min-height: 100vh;
+}
+
+.sidebar {
+    width: 64px;
+    flex-shrink: 0;
+    background: #0d1226;
+    border-right: 1px solid black;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 20px 0;
+    position: sticky;
+    top: 0;
+    height: 100vh;
+}
+
+.sidebar_mark {
+    width: 32px;
+    height: 32px;
+    background: white;
+    clip-path: polygon(34.71% 33.89%, 50% 49.19%, 65.29% 33.89%, 65.29% 62%, 70.63% 74.81%, 50% 72.31%, 29.37% 74.81%, 34.71% 62%);
+    margin-bottom: 28px;
+}
+
+.sidebar_nav {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    align-items: center;
+}
+
+.sidebar_item {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 6px;
+    font-size: 0.75rem;
+    color: #5b6584;
+    transition: color 0.5s cubic-bezier(0.22, 1, 0.36, 1);
+}
+
+.sidebar_item span.label {
+    writing-mode: vertical-lr;
+    font-size: 0.6rem;
+    letter-spacing: 0.1rem;
+}
+
+.sidebar_item:hover,
+.sidebar_item[aria-current="page"] {
+    color:  #2f6fed;
+}
+
+.sidebar_foot {
+    margin-top: auto;
+    color: #5b6584;
+}
