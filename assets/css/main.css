@@ -1,16 +1,16 @@
 /* ====== leyout tampilan utama ====== */
 
-/* === leyout shell === */
+/* --- leyout shell --- */
 .app-shell {
     display: flex;
     min-height: 100vh;
 }
 
 .sidebar {
-    width: 64px;
+    width: var(--sidebar-w);
     flex-shrink: 0;
-    background: #0d1226;
-    border-right: 1px solid black;
+    background: var(--bg-panel);
+    border-right: 1px solid var(--line-soft);
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -23,7 +23,7 @@
 .sidebar_mark {
     width: 32px;
     height: 32px;
-    background: white;
+    background: var(--accent);
     clip-path: polygon(34.71% 33.89%, 50% 49.19%, 65.29% 33.89%, 65.29% 62%, 70.63% 74.81%, 50% 72.31%, 29.37% 74.81%, 34.71% 62%);
     margin-bottom: 28px;
 }
@@ -31,7 +31,7 @@
 .sidebar_nav {
     display: flex;
     flex-direction: column;
-    gap: 20px;
+    gap: 22px;
     align-items: center;
 }
 
@@ -40,9 +40,10 @@
     flex-direction: column;
     align-items: center;
     gap: 6px;
+    font-family: var(--font-mono);
     font-size: 0.75rem;
     color: #5b6584;
-    transition: color 0.5s cubic-bezier(0.22, 1, 0.36, 1);
+    transition: color 0.2s var(--ease);
 }
 
 .sidebar_item span.label {
@@ -53,10 +54,170 @@
 
 .sidebar_item:hover,
 .sidebar_item[aria-current="page"] {
-    color:  #2f6fed;
+    color: var(--accent);
 }
 
 .sidebar_foot {
     margin-top: auto;
-    color: #5b6584;
+    color: var(--text-tertiary);
+}
+
+.sidebar__item:hover, .sidebar__item[aria-current="page"] {
+    color: var(--accent);
+}
+
+.contect {
+    flex: 1;
+    min-width: 0;
+}
+
+.hero,
+.section {
+  scroll-margin-top: var(--header-h);
+}
+
+/* --- Header --- */
+.site-header {
+    display: flex;
+    align-items: center;    
+    justify-content: space-between;
+    gap: 25px;
+    padding: 20px 32px;
+    background: var(--bg-panel);
+    border-bottom: 1px solid var(--line-soft);
+    position: sticky;
+    top: 0;
+    z-index: 40;
+}
+
+.brand_name {
+    font-family: var(--font-display);
+    font-weight: 700;
+    font-size: 1rem;
+    letter-spacing: 0.5rem;
+}
+
+.brand_tagline {
+    font-family: var(--font-mono);
+    font-size: 0.5rem;
+    color: var(--text-tertiary);
+    letter-spacing: 0.12rem;
+}
+
+.main-nav {
+    display: flex;
+    gap: 30px;
+    font-size: 0.8rem;
+    letter-spacing: 0.5em;
+    text-transform: uppercase;
+}
+
+.main-nav a {
+    color: var(--text-secondary);
+    padding-bottom: 5px;
+    border-bottom: 1px solid transparent;
+}
+
+.main-nav a:hover {
+    color: var(--text-primary);
+}
+
+.main-nav a[aria-current="page"] {
+    color: var(--accent);
+    border-bottom-color: var(--accent);
+}
+
+.nav-toggle {
+    background: none;
+    border: none;
+    color: var(--text-primary);
+    font-size: 1.4rem;
+    -webkit-font-smoothing: antialiased;
+}
+
+/* --- Hero home --- */
+.hero {
+    position: relative;
+    overflow: hidden;
+    padding: 72px 32px 88px;
+    background: var(--bg-base);
+}
+
+.hero_cut {
+    position: absolute;
+    inset: 0;
+    background: var(--bg-panel);
+    z-index: 0;
+}
+
+.hero_grid {
+    position: relative;
+    z-index: 1;
+    display: grid;
+    grid-template-columns: 1.1fr 1fr;
+    gap: 40px;
+    align-items: center;
+    max-width: 1200px;
+}
+
+.hero_title {
+    font-family: var(--font-display);
+    font-weight: 700;
+    font-size: clamp(2.4rem, 5vw, 4rem);
+    line-height: 1.5;
+    margin: 14px 0 18px;
+}
+
+.hero_title .accent {
+    color: var(--accent);
+}
+
+.hero_lede {
+    color: var(--text-secondary);
+    max-width: 42ch;
+    margin-bottom: 28px;
+    font-size: 1.02rem;
+}
+
+.hero_actions {
+    display: flex;
+    gap: 14px;
+    flex-wrap: wrap;
+}
+
+.btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  padding: 13px 22px;
+  font-size: 0.82rem;
+  font-weight: 500;
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+  border-radius: var(--radius-sm);
+  transition: transform 0.18s var(--ease), background 0.18s var(--ease);
+  border: 1px solid transparent;
+}
+
+.btn:hover {
+    transform: translateY(-2px);
+}
+
+.btn-primary {
+    background: var(--accent);
+    color: #fff;
+    clip-path: polygon(0% 0%, 94.75% 0%, 88.97% 23.93%, 92.75% 50%, 88.97% 76.07%, 92.75% 100%, 0% 100%);
+}
+
+.btn-primary:hover {
+    background: var(--accent-hover);
+}
+
+.btn-ghost {
+    border-color: var(--line);
+    color: var(--text-primary);
+}
+
+.btn-ghost:hover {
+    border-color: var(--accent-hover);
 }

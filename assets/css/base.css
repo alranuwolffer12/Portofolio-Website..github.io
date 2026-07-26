@@ -1,0 +1,60 @@
+/*===== BASE.CSS — Design tokens, reset, tipografi global =====*/
+
+@import url('https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@500;600;700&family=Inter:wght@400;500;600&family=JetBrains+Mono:wght@400;500&display=swap');
+
+:root {
+    /* --- Warna mode utama --- */
+    --bg-void: #eef2fb;
+    --bg-base: #ffffff;
+    --bg-panel: #0d1226;
+    --bg-panel-alt: #131b33;
+    --line: #1b2440;
+    --line-soft: #161d33;
+
+    --text-primary: #f2f4fa;
+    --text-secondary: #9aa3c0;
+    --text-tertiary: #5b6584;
+
+    --accent: #2f6fed;
+    --accent-hover: #4b83ff;
+    --accent-soft: #1b2a55;
+    --accent-text: #eaf0ff;
+
+    --success: #5dcaa5;
+
+    /* --- Tipografi --- */
+    --font-display: 'Space Grotesk', sans-serif;
+    --font-body: 'Inter', sans-serif;
+    --font-mono: 'JetBrains Mono', monospace;
+
+    /* --- Layout --- */
+    --sidebar-w: 64px;
+    --header-h: 76px;
+    --radius-sm: 4px;
+    --radius-md: 8px;
+    --ease: cubic-bezier(0.22, 1, 0.36, 1);
+}
+
+/* --- Reset --- */
+*,*::before, *::after { box-sizing: border-box;}
+html {scroll-behavior: smooth;}
+body, h1, h2, h3, h4, p, figure { margin: 0; }
+ul { list-style: none; margin: 0; padding: 0;}
+a { color: inherit; text-decoration: none;}
+button { font: inherit; cursor: pointer; }
+
+body {
+    background: var(--bg-base);
+    color: var(--text-primary);
+    font-family: var(--font-body);
+    line-height: 1.5;
+    -webkit-font-smoothing: antialiased;
+}
+
+.eyes {
+    font-family: var(--font-mono);
+    font-size: 0.7rem;
+    letter-spacing: 0.18rem;
+    text-transform: uppercase;
+    color: var(--text-tertiary);
+}
