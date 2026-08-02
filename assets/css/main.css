@@ -42,7 +42,7 @@
     gap: 6px;
     font-family: var(--font-mono);
     font-size: 0.75rem;
-    color: #5b6584;
+    color: var(--text-tertiary);
     transition: color 0.2s var(--ease);
 }
 
@@ -146,7 +146,6 @@
 .hero_cut {
     position: absolute;
     inset: 0;
-    background: var(--bg-panel);
     z-index: 0;
 }
 
@@ -169,7 +168,7 @@
 }
 
 .hero_title .accent {
-    color: var(--accent);
+    color: var(--accent-soft);
 }
 
 .hero_lede {
@@ -205,12 +204,14 @@
 
 .btn-primary {
     background: var(--accent);
-    color: #fff;
-    clip-path: polygon(0% 0%, 94.75% 0%, 88.97% 23.93%, 92.75% 50%, 88.97% 76.07%, 92.75% 100%, 0% 100%);
+    color: var(--bg-base);
 }
 
 .btn-primary:hover {
+    transition: .5s ease-in-out;
+    clip-path: polygon(0% 0%, 94.75% 0%, 88.97% 23.93%, 92.75% 50%, 88.97% 76.07%, 92.75% 100%, 0% 100%);
     background: var(--accent-hover);
+    transition-delay: .3s;
 }
 
 .btn-ghost {
@@ -220,4 +221,97 @@
 
 .btn-ghost:hover {
     border-color: var(--accent-hover);
+}
+
+.hero_visual {
+    position: relative;
+    height: 340px;
+    border-radius: var(--radius-md);
+    overflow: hidden;
+}
+
+.hero_img {
+    max-width: 100%;
+    max-height: 100%;
+}
+
+/* --- setion umum --- */
+.section {
+    padding: 72px 32px;
+}
+
+.section--alt {
+    background: var(--bg-panel);
+}
+
+.section_head {
+    max-width: 640px; margin-bottom: 40px;
+}
+
+.section_title {
+  font-family: var(--font-display);
+  font-weight: 700;
+  font-size: clamp(1.6rem, 3vw, 2.2rem);
+  margin-top: 8px;
+}
+
+.section_lede {
+    color: var(--text-secondary); margin-top: 10px;
+}
+
+.section_link {
+  font-size: 0.82rem;
+  color: var(--accent);
+  white-space: nowrap;
+}
+
+/* --- about --- */
+.about_grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 48px;
+    align-items: start;
+    max-width: 1100px;
+}
+
+.about_photo {
+    border-radius: var(--radius-md);
+    overflow: hidden;
+    background: var(--bg-panel);
+    aspect-ratio: 5.5/3;
+}
+
+.about_photo img {
+    max-width: 100%;
+    object-fit: cover;
+    display: block;
+}
+
+.about_copy p {
+    color: var(--text-tertiary);
+    margin-bottom: 16px;
+}
+
+.stat_row {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 25px;
+    margin-top: 40px;
+    min-width: 1100px;
+    padding: 32px;
+    border-top: 1px solid var(--line-soft);
+}
+
+.stat_num {
+  font-family: var(--font-display);
+  font-weight: 700;
+  font-size: 2rem;
+  color: var(--accent);
+}
+.stat_label {
+  font-size: 0.75rem;
+  color: var(--text-tertiary);
+  text-transform: uppercase;
+  letter-spacing: 0.06em;
+  margin-top: 4px;
 }

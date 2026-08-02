@@ -4,23 +4,30 @@
 
 :root {
     /* --- Warna mode utama --- */
-    --bg-void: #eef2fb;
-    --bg-base: #ffffff;
-    --bg-panel: #0d1226;
-    --bg-panel-alt: #131b33;
-    --line: #1b2440;
-    --line-soft: #161d33;
 
-    --text-primary: #f2f4fa;
-    --text-secondary: #9aa3c0;
-    --text-tertiary: #5b6584;
+    /* Background */
+    --bg-void: #050505;
+    --bg-base: #0A0A0A;
+    --bg-panel: #121212;
+    --bg-panel-alt: #1B1B1B;
 
-    --accent: #2f6fed;
-    --accent-hover: #4b83ff;
-    --accent-soft: #1b2a55;
-    --accent-text: #eaf0ff;
+    /* Border */
+    --line: #2D2D2D;
+    --line-soft: #1A1A1A;
 
-    --success: #5dcaa5;
+    /* Text */
+    --text-primary: #F5F5F5;
+    --text-secondary: #BDBDBD;
+    --text-tertiary: #8A8A8A;
+
+    /* Accent */
+    --accent: #FFFFFF;
+    --accent-hover: #E0E0E0;
+    --accent-soft: #2A2A2A;
+    --accent-text: #FFFFFF;
+
+    /* Status */
+    --success: #D6D6D6;
 
     /* --- Tipografi --- */
     --font-display: 'Space Grotesk', sans-serif;
@@ -41,6 +48,7 @@ html {scroll-behavior: smooth;}
 body, h1, h2, h3, h4, p, figure { margin: 0; }
 ul { list-style: none; margin: 0; padding: 0;}
 a { color: inherit; text-decoration: none;}
+img { max-width: 100%; display: block; }
 button { font: inherit; cursor: pointer; }
 
 body {
@@ -51,6 +59,19 @@ body {
     -webkit-font-smoothing: antialiased;
 }
 
+:focus-visible {
+    outline: 2PX solid var(--accent);
+    outline-offset: 3px;
+}
+
+@media (prefers-reduced-motion: reduce) {
+    *, *::before, *::after {
+        animation-duration: 0.03ms !important;
+        transition-duration: 0.01ms !important;
+        scroll-behavior: auto !important;
+    }
+}
+
 .eyes {
     font-family: var(--font-mono);
     font-size: 0.7rem;
@@ -58,3 +79,4 @@ body {
     text-transform: uppercase;
     color: var(--text-tertiary);
 }
+
