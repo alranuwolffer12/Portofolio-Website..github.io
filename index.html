@@ -7,10 +7,10 @@
     <meta name="description" content="Portoflio Alfathir Ramandhan Nugroho seorang game dev dan web Developer">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css" integrity="sha512-2SwdPD6INVrV/lHTZbO2nodKhrnDdJK9/kg2XD1r9uGqPo1cUbujc+IYdlYdEErWNu69gVcYgdxlmVmzTWnetw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
     <link rel="stylesheet" href="assets/css/main.css">
+    <link rel="stylesheet" href="assets/css/base.css">
 </head>
 <body>
-    <a href=""></a>
-    
+        <a href=""></a>
     <div class="app-shell">
         <!-- sidebar bernomor untuk indikator halaman scroll-->
         <aside class="sidebar" aria-label="Navigasi halaman">
@@ -32,7 +32,10 @@
                     <div class="brand_tagline">DESIGN &minus; PROGARAM &minus; GAME</code></div>
                 </div>
                 <nav class="main-nav" data-main-nav aria-label="Navigasi Utama">
-                    <a></a>
+                    <a href="#home">Home</a>
+                    <a href="#about">About</a>
+                    <a href="#portfolio">Portfolio</a>
+                    <a href="#contact">Contact</a>
                 </nav>
                 <button class="nav-toggle" data-nav-toggle aria-label="Buka Menu Navigasi" aria-expanded="false">&#9776;</button>
             </header>
@@ -45,19 +48,59 @@
                     <div class="hero_grid">
                         <div>
                             <p class="eyes">Selamat Datang</p>
-                            <h1>Halo Saya<br><span>AlFATHIR R.N</span></h1>
-                            <P></P>
-                            <div>
-                                <a href="#portfolio">lihat Karya &rarr;</a>
-                                <a href="#contact">Hubungi saya</a>
+                            <h1 class="hero_title">Halo, Saya<br><span class="accent">AlFATHIR R.N</span></h1>
+                            <P class="hero_lede">Saya membangun pengalaman digital, aplikasi web sampai prototipe game kecil</P>
+                            <div class="hero_actions">
+                                <a class="btn-primary" href="#portfolio">lihat Karya</a>
+                                <a class="btn-ghost" href="#contact">Hubungi saya</a>
                             </div>
+                        </div>
+                        <div class="hero_visual" aria-hidden="true">
+                            <img class="hero_img" src="assets/images/hero.webp">
                         </div>
                     </div>
                 </section>
 
                 <!-- ==== About ==== -->
                 <section class="section" id="about" data-section>
-                    <p class="eye">Tentang saya</p>
+                    <p class="eyes">Tentang saya</p>
+                    <h2 class="section_title">Sedikit Cerita Tentang Saya</h2>
+
+                    <div class="about_grid">
+                        <div class="about_photo">
+                            <img src="assets/images/about_photo.webp" alt="">
+                        </div>
+                        <div class="about_copy">
+                            <p>
+                                Saya adalah seorang pelajar kejuruan yang memiliki ketertarikan 
+                                terhadap pengembangan software dan industri game, itu sebabnya 
+                                saya memilih jurusan RPL untuk membantu perkembangan saya dimasa
+                                mendatang.
+                            </p>
+                            <p>
+                                saya sering mengunakan mengunakan software yang berbasis open source
+                            </p>
+                        </div>
+                    </div>
+                        
+                        <div class="stat_row">
+                            <div>
+                                <div class="stat_num">2+</div>
+                                <div class="stat_label">Tahun Belajar</div>
+                            </div>
+                            <div>
+                                <div class="stat_num">3</div>
+                                <div class="stat_label">Project Selesai</div>
+                            </div>
+                            <div>
+                                <div class="stat_num">2</div>
+                                <div class="stat_label">Bidang Fokus</div>
+                            </div>
+                            <div>
+                                <div class="stat_num">35%</div>
+                                <div class="stat_label">Proses belajar</div>
+                            </div>
+                        </div>
                 </section>
 
                 <!-- ==== Portfolio ==== -->
@@ -67,5 +110,6 @@
                 <section id="contact" data-section></section>
             </main>
         </div>
+        <script src="assets/js/main.js"></script>
 </body>
 </html>
