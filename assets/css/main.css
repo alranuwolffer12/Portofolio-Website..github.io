@@ -41,7 +41,7 @@
     align-items: center;
     gap: 6px;
     font-family: var(--font-mono);
-    font-size: 0.75rem;
+    font-size: 0.90rem;
     color: var(--text-tertiary);
     transition: color 0.2s var(--ease);
 }
@@ -62,7 +62,7 @@
     color: var(--text-tertiary);
 }
 
-.sidebar__item:hover, .sidebar__item[aria-current="page"] {
+.sidebar_item:hover, .sidebar_item[aria-current="page"] {
     color: var(--accent);
 }
 
@@ -185,17 +185,17 @@
 }
 
 .btn {
-  display: inline-flex;
-  align-items: center;
-  gap: 8px;
-  padding: 13px 22px;
-  font-size: 0.82rem;
-  font-weight: 500;
-  letter-spacing: 0.04em;
-  text-transform: uppercase;
-  border-radius: var(--radius-sm);
-  transition: transform 0.18s var(--ease), background 0.18s var(--ease);
-  border: 1px solid transparent;
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    padding: 13px 22px;
+    font-size: 0.82rem;
+    font-weight: 500;
+    letter-spacing: 0.04em;
+    text-transform: uppercase;
+    border-radius: var(--radius-sm);
+    transition: transform 0.18s var(--ease), background 0.18s var(--ease);
+    border: 1px solid transparent;
 }
 
 .btn:hover {
@@ -314,4 +314,35 @@
   text-transform: uppercase;
   letter-spacing: 0.06em;
   margin-top: 4px;
+}
+
+/* --- about skill card --- */
+.card_grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(220px, 1fr));
+    gap: 1px;
+    background: var(--line-soft);
+    border: 2px solid var(--line-soft);
+}
+
+.card_skill {
+    background: var(--bg-base);
+    padding: 26px 24px; 
+    transition: backgraound 0.2s var(--ease);
+}
+
+.card_skill:hover {
+    background: var(--bg-panel);
+}
+
+.card_skill_title {
+    font-family: var(--font-display);
+    font-weight: 600;
+    font-size: 1rem;
+    margin-bottom: 14px;
+}
+
+.card_skill_des {
+    color: var(--text-secondary);
+    font-size: 0.90rem;
 }

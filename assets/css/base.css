@@ -80,3 +80,18 @@ body {
     color: var(--text-tertiary);
 }
 
+.skip-link {
+  position: absolute;
+  left: 16px;
+  top: -48px;
+  background: var(--accent);
+  color: #fff;
+  padding: 10px 16px;
+  border-radius: var(--radius-sm);
+  z-index: 999;
+  transition: top 0.2s var(--ease);
+}
+
+.skip-link:focus {
+    top: 16px;
+}
